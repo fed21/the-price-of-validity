@@ -1,4 +1,4 @@
-# the_price_of_validity
+# The price of validity
 The price of validity, an important paper assigned as a practical project for the course of Dependable Distributed Systems at Sapienza University of Rome.
 
 Mayank Bawa, Aristides Gionis, Hector Garcia-Molina, Rajeev Motwani:
