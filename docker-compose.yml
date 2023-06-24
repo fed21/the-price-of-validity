@@ -3,7 +3,7 @@ services:
   node-1:
     image: my_image
     networks:
-      net:
+      - net
     environment:
       NEIGHBOURS_LIST: 'coda-7,coda-8'
       QUEUE: 'coda-1'
@@ -11,7 +11,7 @@ services:
   node-2:
     image: my_image
     networks:
-      net:
+      - net
     environment:
       NEIGHBOURS_LIST: 'coda-7,coda-8'
       QUEUE: 'coda-2'
@@ -19,7 +19,7 @@ services:
   node-3:
     image: my_image
     networks:
-      net:
+      - net
     environment:
       NEIGHBOURS_LIST: 'coda-7,coda-8'
       QUEUE: 'coda-3'
@@ -27,7 +27,7 @@ services:
   node-4:
     image: my_image
     networks:
-      net:
+      - net
     environment:
       NEIGHBOURS_LIST: 'coda-7,coda-8'
       QUEUE: 'coda-4'
@@ -35,7 +35,7 @@ services:
   node-5:
     image: my_image
     networks:
-      net:
+      - net
     environment:
       NEIGHBOURS_LIST: 'coda-7,coda-8'
       QUEUE: 'coda-5'
@@ -43,7 +43,7 @@ services:
   node-6:
     image: my_image
     networks:
-      net:
+      - net
     environment:
       NEIGHBOURS_LIST: 'coda-7,coda-8'
       QUEUE: 'coda-6'
@@ -51,7 +51,7 @@ services:
   node-7:
     image: my_image
     networks:
-      net:
+      - net
     environment:
       NEIGHBOURS_LIST: 'coda-7,coda-8'
       QUEUE: 'coda-7'
@@ -59,7 +59,7 @@ services:
   node-8:
     image: my_image
     networks:
-      net:
+      - net
     environment:
       NEIGHBOURS_LIST: 'coda-7,coda-8'
       QUEUE: 'coda-8'
@@ -69,7 +69,7 @@ services:
   node-9:
     image: my_image
     networks:
-      net:
+      - net
     environment:
       NEIGHBOURS_LIST: 'coda-7,coda-8'
       QUEUE: 'coda-9'
@@ -77,12 +77,22 @@ services:
   node-10:
     image: my_image
     networks:
-      net:
+      - net
     environment:
       NEIGHBOURS_LIST: 'coda-7,coda-8'
       QUEUE: 'coda-10'
     container_name: node-10
+  portainer:
+    image: portainer/portainer-ce:latest
+    ports:
+      - 9443:9443
+    volumes:
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
 
+volumes:
+  portainer_data:
 networks:
   net:
     driver: bridge
