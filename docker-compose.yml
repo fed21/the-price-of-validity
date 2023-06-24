@@ -1,0 +1,88 @@
+version: "3"
+services:
+  node-1:
+    image: my_image
+    networks:
+      net:
+    environment:
+      NEIGHBOURS_LIST: 'coda-7,coda-8'
+      QUEUE: 'coda-1'
+    container_name: node-1
+  node-2:
+    image: my_image
+    networks:
+      net:
+    environment:
+      NEIGHBOURS_LIST: 'coda-7,coda-8'
+      QUEUE: 'coda-2'
+    container_name: node-2
+  node-3:
+    image: my_image
+    networks:
+      net:
+    environment:
+      NEIGHBOURS_LIST: 'coda-7,coda-8'
+      QUEUE: 'coda-3'
+    container_name: node-3
+  node-4:
+    image: my_image
+    networks:
+      net:
+    environment:
+      NEIGHBOURS_LIST: 'coda-7,coda-8'
+      QUEUE: 'coda-4'
+    container_name: node-4
+  node-5:
+    image: my_image
+    networks:
+      net:
+    environment:
+      NEIGHBOURS_LIST: 'coda-7,coda-8'
+      QUEUE: 'coda-5'
+    container_name: node-5
+  node-6:
+    image: my_image
+    networks:
+      net:
+    environment:
+      NEIGHBOURS_LIST: 'coda-7,coda-8'
+      QUEUE: 'coda-6'
+    container_name: node-6
+  node-7:
+    image: my_image
+    networks:
+      net:
+    environment:
+      NEIGHBOURS_LIST: 'coda-7,coda-8'
+      QUEUE: 'coda-7'
+    container_name: node-7
+  node-8:
+    image: my_image
+    networks:
+      net:
+    environment:
+      NEIGHBOURS_LIST: 'coda-7,coda-8'
+      QUEUE: 'coda-8'
+    build:
+      context: .
+    container_name: node-8
+  node-9:
+    image: my_image
+    networks:
+      net:
+    environment:
+      NEIGHBOURS_LIST: 'coda-7,coda-8'
+      QUEUE: 'coda-9'
+    container_name: node-9
+  node-10:
+    image: my_image
+    networks:
+      net:
+    environment:
+      NEIGHBOURS_LIST: 'coda-7,coda-8'
+      QUEUE: 'coda-10'
+    container_name: node-10
+
+networks:
+  net:
+    driver: bridge
