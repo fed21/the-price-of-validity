@@ -12,10 +12,6 @@ In particular, the analysis must consider different dynamic networks, highlighti
 * Execute each code block in "Initial stuff" section setting number of hosts
 * Execute preferred code block in "Random Topology" or in "Powerlaw Topology"
 * Execute code block in "Generate docker-compose file"
-* Open terminal and run
-        
-        docker build -p my_image .
-        docker compose -p nodes up -d
-
-* In start.ipynb file execute code block in "Start query"
-* In start.ipynb file execute code block in "Stop container" defining seconds and container's name
+* Execute code block in "Docker Compose Up"
+* Execute code block in "Start query"
+* Execute code block in "Stop container" defining seconds and container's name
