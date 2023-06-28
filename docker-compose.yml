@@ -1,98 +1,85 @@
 version: "3"
 services:
+  node-0:
+    image: my_image
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-1,queue-2,queue-3,queue-4,queue-5,queue-7'
+      QUEUE: 'queue-0'
+    container_name: node-0
   node-1:
     image: my_image
     networks:
       - net
     environment:
-      NEIGHBOURS_LIST: 'coda-7,coda-8'
-      QUEUE: 'coda-1'
+      NEIGHBORS_LIST: 'queue-0,queue-3,queue-6,queue-8,queue-9'
+      QUEUE: 'queue-1'
     container_name: node-1
   node-2:
     image: my_image
     networks:
       - net
     environment:
-      NEIGHBOURS_LIST: 'coda-7,coda-8'
-      QUEUE: 'coda-2'
+      NEIGHBORS_LIST: 'queue-0,queue-7'
+      QUEUE: 'queue-2'
     container_name: node-2
   node-3:
     image: my_image
     networks:
       - net
     environment:
-      NEIGHBOURS_LIST: 'coda-7,coda-8'
-      QUEUE: 'coda-3'
+      NEIGHBORS_LIST: 'queue-0,queue-1,queue-4,queue-5,queue-6'
+      QUEUE: 'queue-3'
     container_name: node-3
   node-4:
     image: my_image
     networks:
       - net
     environment:
-      NEIGHBOURS_LIST: 'coda-7,coda-8'
-      QUEUE: 'coda-4'
+      NEIGHBORS_LIST: 'queue-0,queue-3'
+      QUEUE: 'queue-4'
     container_name: node-4
   node-5:
     image: my_image
     networks:
       - net
     environment:
-      NEIGHBOURS_LIST: 'coda-7,coda-8'
-      QUEUE: 'coda-5'
+      NEIGHBORS_LIST: 'queue-0,queue-3'
+      QUEUE: 'queue-5'
     container_name: node-5
   node-6:
     image: my_image
     networks:
       - net
     environment:
-      NEIGHBOURS_LIST: 'coda-7,coda-8'
-      QUEUE: 'coda-6'
+      NEIGHBORS_LIST: 'queue-1,queue-3'
+      QUEUE: 'queue-6'
     container_name: node-6
   node-7:
     image: my_image
     networks:
       - net
     environment:
-      NEIGHBOURS_LIST: 'coda-7,coda-8'
-      QUEUE: 'coda-7'
+      NEIGHBORS_LIST: 'queue-0,queue-2,queue-8'
+      QUEUE: 'queue-7'
     container_name: node-7
   node-8:
     image: my_image
     networks:
       - net
     environment:
-      NEIGHBOURS_LIST: 'coda-7,coda-8'
-      QUEUE: 'coda-8'
-    build:
-      context: .
+      NEIGHBORS_LIST: 'queue-1,queue-7,queue-9'
+      QUEUE: 'queue-8'
     container_name: node-8
   node-9:
     image: my_image
     networks:
       - net
     environment:
-      NEIGHBOURS_LIST: 'coda-7,coda-8'
-      QUEUE: 'coda-9'
+      NEIGHBORS_LIST: 'queue-8,queue-1'
+      QUEUE: 'queue-9'
     container_name: node-9
-  node-10:
-    image: my_image
-    networks:
-      - net
-    environment:
-      NEIGHBOURS_LIST: 'coda-7,coda-8'
-      QUEUE: 'coda-10'
-    container_name: node-10
-  portainer:
-    image: portainer/portainer-ce:latest
-    ports:
-      - 9443:9443
-    volumes:
-      - portainer_data:/data
-      - /var/run/docker.sock:/var/run/docker.sock
-    restart: unless-stopped
-
-volumes:
-  portainer_data:
 networks:
   net:
     driver: bridge

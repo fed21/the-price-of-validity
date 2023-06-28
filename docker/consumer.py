@@ -9,7 +9,7 @@ logging.basicConfig()
 #amqps://ihhuwrwo:kDQ69TDnElY2FIg5IyzmxTZcLCBslbtb@rat.rmq2.cloudamqp.com/ihhuwrwo
 def main():
 
-    neighbours = os.environ['NEIGHBOURS_LIST'].split(',')
+    neighbors = os.environ['NEIGHBORS_LIST'].split(',')
     container_queue = os.environ['QUEUE']
     
     url = os.environ.get('CLOUDAMQP_URL', 'amqps://ihhuwrwo:kDQ69TDnElY2FIg5IyzmxTZcLCBslbtb@rat.rmq2.cloudamqp.com/ihhuwrwo')
@@ -18,6 +18,9 @@ def main():
     connection = pika.BlockingConnection(params) # Connect to CloudAMQP
     channel = connection.channel() # start a channel
     channel.queue_declare(queue=container_queue) # Declare a queue
+    print(' [+] Neighbors: ')
+    for queue in range(len(neighbors)):
+        print('  [-] '+ neighbors[queue])
     print(' [*] Declared Queue ' + container_queue)
    
     # receive a message
