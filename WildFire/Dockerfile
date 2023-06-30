@@ -19,4 +19,4 @@ RUN pip3 install pika
 COPY /docker .
 
 # CMD ["tail", "-f", "/dev/null"]
-CMD ["python3", "-u", "consumer.py"]
+CMD ["python3", "-u", "wildfire.py"]

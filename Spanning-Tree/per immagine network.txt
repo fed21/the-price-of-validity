@@ -1,0 +1,28 @@
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock leoverto/docker-network-graph
+
+graph {
+        graph [splines=true]
+        network_nodi_net [label="{<gw_iface> 172.26.0.0/16 | nodi_net}" fillcolor="#b15928" shape=record style=filled]
+        container_6a89bafb16854f38ecc816fd7b51b951025a5cc5373bb5c246cc5548c45e7128 [label="{ node-1 | { {<5cb86468a9af9558627386d00221368d42892102de4edaab19dd5497341d9e83> 172.26.0.5 } } }" fillcolor="#ff9999" shape=record style=filled]
+        container_ceab09247e3bce9d02d3f9f2b1e1554ee0dabfbfb3f8e457d83c6172873e2091 [label="{ node-8 | { {<688f98a0f9cf7ccd9cff4566fa5e06b06336844e70d49401b049d5c16a5699c9> 172.26.0.13 } } }" fillcolor="#ff9999" shape=record style=filled]
+        container_d526b50c7eab2af1dfbdaf141f0d774d89d8d3d3b4c96f42fd292f5706868bce [label="{ node-3 | { {<6911b5d6e7a11a07026d0654f2556767c7deb02f1b3ba9888fc67a743c6bc153> 172.26.0.7 } } }" fillcolor="#ff9999" shape=record style=filled]
+        container_9f25d46b6178d12da7db9f08803b38aeab08c7b215ec5e8f6055ddbfa73a77a1 [label="{ node-9 | { {<8d3e1ee73f638bda7f2762e609ab3dc5a039de423cac9cf79be7106f99e156c3> 172.26.0.9 } } }" fillcolor="#ff9999" shape=record style=filled]
+        container_7f6563e488d12b61b9ada433e52dc1e0ce5887d853895ccef2c1fd4e1a04d2c3 [label="{ node-7 | { {<e1f6f5e1ea5759b7e4bda68dd193e90f9d85d868c47f6d5021f7abbc2cca985b> 172.26.0.2 } } }" fillcolor="#ff9999" shape=record style=filled]
+        container_cd32f3fe149b8fe915fd256ea78e20fa6915e867027513f4c4ad9cf8f826c92e [label="{ node-4 | { {<4cfebfa2b7b0b4f09692de28bfdb6363fac00c2efdd8db59620151ad1e843cfe> 172.26.0.11 } } }" fillcolor="#ff9999" shape=record style=filled]
+        container_7cb4bb0f7b0039abb758a0037b15393c7473f1f81055569c00a3713ba5d34107 [label="{ node-10 | { {<16b8a76f35eac5c842f1225e423e4ea6b54e230b86550f14c5117c982aab4ccf> 172.26.0.3 } } }" fillcolor="#ff9999" shape=record style=filled]
+        container_eb093eb7dcd79d6e20a80eca581f72d3ab0df2c0ca53f4ac30cd7e8d2f0cac0c [label="{ node-2 | { {<898a45985a0b8b180b408657655cc19e87d83fd8e17465b1060664626743b22c> 172.26.0.8 } } }" fillcolor="#ff9999" shape=record style=filled]
+        container_7e531eae89b27979423e8f8cc48da6451de766c846e0ad2a74cb853a3e13dc43 [label="{ node-6 | { {<83b50bb98d313326188a0c0f618f22ab760f98deeb33af86b16942f962864239> 172.26.0.6 } } }" fillcolor="#ff9999" shape=record style=filled]
+        container_b8d3beb406045599d2f714c7ca563224ee2a7953a2a957738b276b59efd29cc2 [label="{ node-5 | { {<ce364bebdcfc9cb658b8de8b4ff3c824b7614a312ee496e42ff493b42893bce2> 172.26.0.4 } } }" fillcolor="#ff9999" shape=record style=filled]
+        container_6a89bafb16854f38ecc816fd7b51b951025a5cc5373bb5c246cc5548c45e7128:"5cb86468a9af9558627386d00221368d42892102de4edaab19dd5497341d9e83" -- network_nodi_net [color="#b15928"]
+        container_ceab09247e3bce9d02d3f9f2b1e1554ee0dabfbfb3f8e457d83c6172873e2091:"688f98a0f9cf7ccd9cff4566fa5e06b06336844e70d49401b049d5c16a5699c9" -- network_nodi_net [color="#b15928"]
+        container_d526b50c7eab2af1dfbdaf141f0d774d89d8d3d3b4c96f42fd292f5706868bce:"6911b5d6e7a11a07026d0654f2556767c7deb02f1b3ba9888fc67a743c6bc153" -- network_nodi_net [color="#b15928"]
+        container_9f25d46b6178d12da7db9f08803b38aeab08c7b215ec5e8f6055ddbfa73a77a1:"8d3e1ee73f638bda7f2762e609ab3dc5a039de423cac9cf79be7106f99e156c3" -- network_nodi_net [color="#b15928"]
+        container_7f6563e488d12b61b9ada433e52dc1e0ce5887d853895ccef2c1fd4e1a04d2c3:e1f6f5e1ea5759b7e4bda68dd193e90f9d85d868c47f6d5021f7abbc2cca985b -- network_nodi_net [color="#b15928"]
+        container_cd32f3fe149b8fe915fd256ea78e20fa6915e867027513f4c4ad9cf8f826c92e:"4cfebfa2b7b0b4f09692de28bfdb6363fac00c2efdd8db59620151ad1e843cfe" -- network_nodi_net [color="#b15928"]
+        container_7cb4bb0f7b0039abb758a0037b15393c7473f1f81055569c00a3713ba5d34107:"16b8a76f35eac5c842f1225e423e4ea6b54e230b86550f14c5117c982aab4ccf" -- network_nodi_net [color="#b15928"]
+        container_eb093eb7dcd79d6e20a80eca581f72d3ab0df2c0ca53f4ac30cd7e8d2f0cac0c:"898a45985a0b8b180b408657655cc19e87d83fd8e17465b1060664626743b22c" -- network_nodi_net [color="#b15928"]
+        container_7e531eae89b27979423e8f8cc48da6451de766c846e0ad2a74cb853a3e13dc43:"83b50bb98d313326188a0c0f618f22ab760f98deeb33af86b16942f962864239" -- network_nodi_net [color="#b15928"]
+        container_b8d3beb406045599d2f714c7ca563224ee2a7953a2a957738b276b59efd29cc2:ce364bebdcfc9cb658b8de8b4ff3c824b7614a312ee496e42ff493b42893bce2 -- network_nodi_net [color="#b15928"]
+}
+
+https://dreampuf.github.io/GraphvizOnline/

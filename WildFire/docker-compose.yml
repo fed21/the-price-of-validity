@@ -1,0 +1,176 @@
+version: "3"
+services:
+  node-0:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-11,queue-7,queue-6,queue-17,queue-13,queue-1,queue-3,queue-4'
+      QUEUE: 'queue-0'
+      DEAD: 'false'
+    container_name: node-0
+  node-1:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-4,queue-9,queue-0,queue-18,queue-2,queue-6,queue-11'
+      QUEUE: 'queue-1'
+      DEAD: 'false'
+    container_name: node-1
+  node-2:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-1,queue-3,queue-8,queue-9'
+      QUEUE: 'queue-2'
+      DEAD: 'false'
+    container_name: node-2
+  node-3:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-13,queue-2,queue-15,queue-9,queue-0,queue-18,queue-10,queue-14,queue-11,queue-4'
+      QUEUE: 'queue-3'
+      DEAD: 'false'
+    container_name: node-3
+  node-4:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-1,queue-3,queue-0,queue-13,queue-7,queue-8'
+      QUEUE: 'queue-4'
+      DEAD: 'false'
+    container_name: node-4
+  node-5:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-18,queue-15,queue-14,queue-11'
+      QUEUE: 'queue-5'
+      DEAD: 'false'
+    container_name: node-5
+  node-6:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-0,queue-1,queue-8'
+      QUEUE: 'queue-6'
+      DEAD: 'false'
+    container_name: node-6
+  node-7:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-0,queue-10,queue-17,queue-18,queue-4,queue-16,queue-14,queue-8'
+      QUEUE: 'queue-7'
+      DEAD: 'false'
+    container_name: node-7
+  node-8:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-7,queue-17,queue-4,queue-10,queue-18,queue-2,queue-6,queue-14'
+      QUEUE: 'queue-8'
+      DEAD: 'false'
+    container_name: node-8
+  node-9:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-1,queue-3,queue-2'
+      QUEUE: 'queue-9'
+      DEAD: 'false'
+    container_name: node-9
+  node-10:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-3,queue-7,queue-8,queue-11'
+      QUEUE: 'queue-10'
+      DEAD: 'false'
+    container_name: node-10
+  node-11:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-0,queue-3,queue-13,queue-17,queue-18,queue-1,queue-5,queue-10,queue-14'
+      QUEUE: 'queue-11'
+      DEAD: 'false'
+    container_name: node-11
+  node-12:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: ''
+      QUEUE: 'queue-12'
+      DEAD: 'false'
+    container_name: node-12
+  node-13:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-0,queue-3,queue-4,queue-11'
+      QUEUE: 'queue-13'
+      DEAD: 'false'
+    container_name: node-13
+  node-14:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-3,queue-5,queue-7,queue-8,queue-11'
+      QUEUE: 'queue-14'
+      DEAD: 'false'
+    container_name: node-14
+  node-15:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-3,queue-5'
+      QUEUE: 'queue-15'
+      DEAD: 'false'
+    container_name: node-15
+  node-16:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-7'
+      QUEUE: 'queue-16'
+      DEAD: 'false'
+    container_name: node-16
+  node-17:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-0,queue-7,queue-8,queue-11'
+      QUEUE: 'queue-17'
+      DEAD: 'false'
+    container_name: node-17
+  node-18:
+    image: wildfire
+    networks:
+      - net
+    environment:
+      NEIGHBORS_LIST: 'queue-1,queue-3,queue-5,queue-7,queue-8,queue-11'
+      QUEUE: 'queue-18'
+      DEAD: 'false'
+    container_name: node-18
+networks:
+  net:
+    driver: bridge
