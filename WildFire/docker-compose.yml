@@ -5,172 +5,210 @@ services:
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-11,queue-7,queue-6,queue-17,queue-13,queue-1,queue-3,queue-4'
+      NEIGHBORS_LIST: 'queue-1,queue-2,queue-3,queue-5,queue-9,queue-12'
       QUEUE: 'queue-0'
       DEAD: 'false'
     container_name: node-0
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-1:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-4,queue-9,queue-0,queue-18,queue-2,queue-6,queue-11'
+      NEIGHBORS_LIST: 'queue-0,queue-3,queue-6,queue-7,queue-13'
       QUEUE: 'queue-1'
       DEAD: 'false'
     container_name: node-1
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-2:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-1,queue-3,queue-8,queue-9'
+      NEIGHBORS_LIST: 'queue-0,queue-4,queue-5,queue-8'
       QUEUE: 'queue-2'
-      DEAD: 'false'
+      DEAD: 'true'
     container_name: node-2
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-3:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-13,queue-2,queue-15,queue-9,queue-0,queue-18,queue-10,queue-14,queue-11,queue-4'
+      NEIGHBORS_LIST: 'queue-0,queue-1,queue-4'
       QUEUE: 'queue-3'
-      DEAD: 'false'
+      DEAD: 'true'
     container_name: node-3
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-4:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-1,queue-3,queue-0,queue-13,queue-7,queue-8'
+      NEIGHBORS_LIST: 'queue-2,queue-3,queue-11,queue-13,queue-18'
       QUEUE: 'queue-4'
       DEAD: 'false'
     container_name: node-4
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-5:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-18,queue-15,queue-14,queue-11'
+      NEIGHBORS_LIST: 'queue-0,queue-2,queue-6,queue-7,queue-8,queue-10,queue-11,queue-14'
       QUEUE: 'queue-5'
       DEAD: 'false'
     container_name: node-5
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-6:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-0,queue-1,queue-8'
+      NEIGHBORS_LIST: 'queue-1,queue-5,queue-9,queue-15,queue-16,queue-17'
       QUEUE: 'queue-6'
       DEAD: 'false'
     container_name: node-6
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-7:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-0,queue-10,queue-17,queue-18,queue-4,queue-16,queue-14,queue-8'
+      NEIGHBORS_LIST: 'queue-1,queue-5,queue-12'
       QUEUE: 'queue-7'
-      DEAD: 'false'
+      DEAD: 'true'
     container_name: node-7
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-8:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-7,queue-17,queue-4,queue-10,queue-18,queue-2,queue-6,queue-14'
+      NEIGHBORS_LIST: 'queue-2,queue-5'
       QUEUE: 'queue-8'
-      DEAD: 'false'
+      DEAD: 'true'
     container_name: node-8
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-9:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-1,queue-3,queue-2'
+      NEIGHBORS_LIST: 'queue-0,queue-6,queue-10,queue-14'
       QUEUE: 'queue-9'
       DEAD: 'false'
     container_name: node-9
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-10:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-3,queue-7,queue-8,queue-11'
+      NEIGHBORS_LIST: 'queue-9,queue-5'
       QUEUE: 'queue-10'
-      DEAD: 'false'
+      DEAD: 'true'
     container_name: node-10
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-11:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-0,queue-3,queue-13,queue-17,queue-18,queue-1,queue-5,queue-10,queue-14'
+      NEIGHBORS_LIST: 'queue-4,queue-5,queue-17'
       QUEUE: 'queue-11'
       DEAD: 'false'
     container_name: node-11
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-12:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: ''
+      NEIGHBORS_LIST: 'queue-0,queue-7,queue-15'
       QUEUE: 'queue-12'
-      DEAD: 'false'
+      DEAD: 'true'
     container_name: node-12
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-13:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-0,queue-3,queue-4,queue-11'
+      NEIGHBORS_LIST: 'queue-1,queue-4,queue-18'
       QUEUE: 'queue-13'
       DEAD: 'false'
     container_name: node-13
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-14:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-3,queue-5,queue-7,queue-8,queue-11'
+      NEIGHBORS_LIST: 'queue-9,queue-5'
       QUEUE: 'queue-14'
       DEAD: 'false'
     container_name: node-14
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-15:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-3,queue-5'
+      NEIGHBORS_LIST: 'queue-12,queue-6,queue-16'
       QUEUE: 'queue-15'
       DEAD: 'false'
     container_name: node-15
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-16:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-7'
+      NEIGHBORS_LIST: 'queue-6,queue-15'
       QUEUE: 'queue-16'
-      DEAD: 'false'
+      DEAD: 'true'
     container_name: node-16
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-17:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-0,queue-7,queue-8,queue-11'
+      NEIGHBORS_LIST: 'queue-11,queue-6'
       QUEUE: 'queue-17'
       DEAD: 'false'
     container_name: node-17
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
   node-18:
     image: wildfire
     networks:
       - net
     environment:
-      NEIGHBORS_LIST: 'queue-1,queue-3,queue-5,queue-7,queue-8,queue-11'
+      NEIGHBORS_LIST: 'queue-4,queue-13'
       QUEUE: 'queue-18'
       DEAD: 'false'
     container_name: node-18
+    volumes:
+      - c:\Users\paolo\Documents\Big Data Management\the-price-of-validity\results:/app/results
 networks:
   net:
     driver: bridge

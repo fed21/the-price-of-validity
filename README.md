@@ -9,9 +9,16 @@ In particular, the analysis must consider different dynamic networks, highlighti
 
 # How to start project
 * Clone the repository
+* Execute in command line prompt, in the repository 
+
+        pip install -r requirements.txt
+
 * Open start.ipynb file
 * Execute each code block in "Initial stuff" section setting number of hosts
 * Execute preferred code block in "Create Topology" choosing between "Random Topology" or "Powerlaw Topology"
 * Execute code block in "Generate docker-compose file"
 * Execute code block in "Docker Compose Up" choosing between the two supported algorithm: Spanning-Tree or WildFire 
 * Execute code block in "Start query"
+* In order to get results on dependability attributes run:
+
+        python get_data.py

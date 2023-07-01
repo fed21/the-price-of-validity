@@ -77,6 +77,7 @@ def process_message(ch, method, properties, body):
         
         if message_type == 'broadcast':
             if not active:
+                start_timer()
                 return_node = sender
                 random_broadcast = len(neighbors)
                 if(isdead == 'true'):
@@ -86,7 +87,8 @@ def process_message(ch, method, properties, body):
                 if(isdead == 'true'):
                     close_connections()
                 activate()
-                send_message('convergecast', bits, return_node)
+                for node_dest in neighbors:
+                    send_message('convergecast', bits, node_dest)
         else:
             # val = val || value  # Operation to be performed
             ### OPERAZIONE DI OR TRA VETTORI
@@ -115,16 +117,17 @@ def start_timer():
     timer.start()
 
 def return_value():
-    global return_node, bits, processed_msgs, end, start
+    global return_node, bits, processed_msgs, end, start, val
     ### Timer expired
+    result = 0
     if return_node==None:
         ### ritorno numero di valori
         result = FM()
         print(f"The result of the count is: {result}")
     print(f'Processed Messages: {processed_msgs}')
     computed_time = end-start
-    with open('/output.txt', 'w') as file:
-        file.write(f'Result: {result}\nNumber Messages: {processed_msgs}\nComputed time: {computed_time}')
+    with open(f'/app/results/{val}.txt', 'w') as file:
+        file.write(f'{result}\n{processed_msgs}\n{computed_time}')
 
 def close_connections():
     global connection
@@ -165,6 +168,6 @@ if __name__ == '__main__':
     timer = None
     processed_msgs = 0
     channel = None
-    start = None
-    end = None
+    start = 0.0
+    end = 0.0
     main()
