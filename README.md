@@ -5,7 +5,7 @@ Mayank Bawa, Aristides Gionis, Hector Garcia-Molina, Rajeev Motwani:
 The price of validity in dynamic networks. J. Comput. Syst. Sci. 73(3): 245-264 (2007)
 https://doi.org/10.1016/j.jcss.2006.10.007
 
-In particular, the analysis must consider different dynamic networks, highlighting how the dependability metrics change on different networks.
+In particular, the analysis must consider different dynamic networks, highlighting how the performance metrics change on different networks.
 
 # How to start project
 * Clone the repository.
@@ -13,7 +13,7 @@ In particular, the analysis must consider different dynamic networks, highlighti
 
         pip install -r requirements.txt
 
-* Retrieve a url from cloud amqp service https://www.cloudamqp.com/
+* Retrieve a url from cloud amqp service: https://www.cloudamqp.com/
 * Open start.ipynb file.
 * Execute each code block in "Initial stuff" section:
 	* Execute code block "Imports" to import all required libraries.
