@@ -13,7 +13,7 @@ In particular, the analysis must consider different dynamic networks, highlighti
 
         pip install -r requirements.txt
 
-* Retrieve a url from cloud amqp service ''
+* Retrieve a url from cloud amqp service https://www.cloudamqp.com/
 * Open start.ipynb file.
 * Execute each code block in "Initial stuff" section:
 	* Execute code block "Imports" to import all required libraries.
